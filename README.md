@@ -31,6 +31,27 @@ supp/
 
   within_class_dependence_permutation.py
       New marginal-preserving dependence sensitivity analysis
+
+  gmm_component_selection_sensitivity.py
+      Fixed K=2 versus class-specific AIC and BIC selections; displays the
+      nine-panel AUC/KLD/utility comparison and writes its supporting tables
+
+tables/
+  table_1_dataset_summary.py
+      Table 1
+
+  table_2_discriminator_utility_summary.py
+      Table 2 using 50 AUC and 20 utility repetitions
+
+  tables_s1_to_s4_marginal_comparisons.py
+      Table S1 summary plus complete HIV, Breast Cancer, and Diabetes tables
+      S2-S4
+
+  table_s5_gmm_aic_bic_selection.py
+      Table S5
+
+  table_s6_graphical_lasso_feature_order.py
+      Table S6
 ```
 
 The scripts are intentionally ordinary top-to-bottom analysis files. They show
@@ -58,6 +79,10 @@ python supp/within_class_dependence_permutation.py
 Each script opens its Matplotlib figure with `plt.show()`. It does not save a
 PDF, PNG, JPEG, or any other rendered artifact. `cache/` is retained only for
 legacy low-level helpers and can be deleted safely between runs.
+
+Table scripts write both CSV and Overleaf-ready `.tex` files to
+`table_outputs/`. Existing files in that directory are the current manuscript
+tables; rerunning a table script replaces the corresponding outputs.
 
 ## Data
 

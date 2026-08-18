@@ -11,6 +11,14 @@ AIC_COMPONENTS_BY_DATASET = {
     "HIV": (2, 3),
 }
 
+# Class-specific component counts selected by minimum BIC over the same
+# K = 2, 3, 4, and 5 full-covariance candidate models.
+BIC_COMPONENTS_BY_DATASET = {
+    "Breast Cancer": (2, 2),
+    "Diabetes": (4, 2),
+    "HIV": (2, 2),
+}
+
 
 def sample_gmm(
     X,
@@ -79,4 +87,3 @@ def sample_gmm(
     ])
 
     return X_syn, y_syn
-

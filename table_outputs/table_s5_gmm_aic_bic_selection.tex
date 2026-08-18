@@ -1,0 +1,19 @@
+% Requires \usepackage{booktabs,graphicx}
+\begin{table}
+\caption{AIC and BIC model-selection results for class-specific Gaussian mixture models.}
+\label{tab:gmm_aic_bic}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+Dataset & Class & n & AIC (K=2) & AIC (K=3) & AIC (K=4) & AIC (K=5) & BIC (K=2) & BIC (K=3) & BIC (K=4) & BIC (K=5) & AIC-selected K & BIC-selected K & AIC/BIC agree \\
+\midrule
+Breast Cancer & 0 & 212 & 3278.90 & 3091.85 & 2290.20 & 1205.98 & 6605.28 & 8083.09 & 8946.31 & 9526.96 & 5 & 2 & False \\
+Breast Cancer & 1 & 357 & 3460.49 & 2546.79 & 1521.41 & 1418.28 & 7303.32 & 8312.98 & 9210.96 & 11031.19 & 5 & 2 & False \\
+Diabetes & 0 & 500 & 8626.79 & 7521.42 & 6962.43 & 6819.60 & 9001.89 & 8086.18 & 7716.84 & 7763.67 & 5 & 4 & False \\
+Diabetes & 1 & 268 & 4243.42 & 4140.65 & 3996.91 & 3954.00 & 4563.02 & 4621.85 & 4639.70 & 4758.38 & 5 & 2 & False \\
+HIV & 0 & 23 & 603.46 & 4711.78 & 7910.85 & 12246.29 & 5325.98 & 11796.13 & 17357.02 & 24054.29 & 2 & 2 & True \\
+HIV & 1 & 68 & -2797.14 & -3649.28 & 309.62 & 498.00 & 6433.79 & 10198.23 & 18773.71 & 23578.66 & 3 & 2 & False \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

@@ -22,7 +22,7 @@ from sklearn.model_selection import train_test_split
 
 from models.bootstrap import sample_bootstrap
 from models.cvae import sample_cvae
-from models.gmm import AIC_COMPONENTS_BY_DATASET, sample_gmm
+from models.gmm import sample_gmm
 from models.iid_columnwise import sample_columnwise
 from models.smote import sample_gmm_guided_smote, sample_smote
 from src.revision.common import (
@@ -125,8 +125,7 @@ def sample_method(
     if method == "Column-wise":
         return sample_columnwise(X, y, n0, n1, seed=seed)
     if method == "GMM":
-        components = AIC_COMPONENTS_BY_DATASET.get(dataset, 2)
-        return sample_gmm(X, y, n0, n1, seed=seed, n_components=components)
+        return sample_gmm(X, y, n0, n1, seed=seed, n_components=2)
     if method == "SMOTE":
         return sample_smote(X, y, n0, n1, seed=seed)
     if method == "GMM-guided SMOTE":
@@ -159,13 +158,13 @@ def generate_cohorts(
         cohorts[dataset] = {}
         X = np.asarray(data["X"], dtype=np.float32)
         y = np.asarray(data["y"], dtype=int)
-        for offset, method in enumerate(methods):
+        for method in methods:
             print(f"[generate] {dataset} - {method}")
             cohorts[dataset][method] = sample_method(
                 X,
                 y,
                 method,
-                seed=seed + 101 * offset,
+                seed=seed,
                 cvae_epochs=cvae_epochs,
                 dataset=dataset,
             )
