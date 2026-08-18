@@ -1,0 +1,10 @@
+Dataset,GMM specification,K0/K1,AUC,KLD,Utility gap
+HIV,2 components,2/2,1.000 +/- 0.000,1.110 +/- 0.594,0.013 +/- 0.008
+HIV,AIC-selected,2/3,1.000 +/- 0.000,1.180 +/- 0.674,0.009 +/- 0.008
+HIV,BIC-selected,2/2,1.000 +/- 0.000,1.110 +/- 0.594,0.013 +/- 0.008
+Breast Cancer,2 components,2/2,0.992 +/- 0.003,0.276 +/- 0.255,0.009 +/- 0.003
+Breast Cancer,AIC-selected,5/5,0.991 +/- 0.003,0.270 +/- 0.263,0.003 +/- 0.002
+Breast Cancer,BIC-selected,2/2,0.992 +/- 0.003,0.276 +/- 0.255,0.009 +/- 0.003
+Diabetes,2 components,2/2,0.979 +/- 0.005,0.455 +/- 0.248,0.010 +/- 0.008
+Diabetes,AIC-selected,5/5,0.975 +/- 0.006,0.310 +/- 0.187,0.012 +/- 0.007
+Diabetes,BIC-selected,4/2,0.978 +/- 0.005,0.378 +/- 0.265,0.030 +/- 0.013
