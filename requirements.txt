@@ -1,0 +1,8 @@
+ipython>=8.0
+matplotlib>=3.10
+numpy>=2.0
+pandas>=2.2
+pyreadr>=0.5
+scikit-learn>=1.6
+scipy>=1.14
+torch>=2.5
